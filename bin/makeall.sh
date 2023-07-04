@@ -22,8 +22,8 @@ TEX_MAIN_PARENT=`realpath "${TEX_LAYOUT_BIN_DIR}/../.."`
 echo "Tex main Parent: ${TEX_MAIN_PARENT}"
 
 # export BBW_KAPITEL_DIR=${TEX_MAIN_PARENT}/includes/kapitel
-export BBW_PRUEFUNGS_DIR=${TEX_MAIN_PARENT}/cnt/pruefungen
-export BBW_PRUEFUNGS_AUFGABEN_DIR=${TEX_MAIN_PARENT}/cnt/pruefungen/aufgaben
+export BBW_PRUEFUNGS_DIR=${TEX_MAIN_PARENT}/pruefungen
+export BBW_PRUEFUNGS_AUFGABEN_DIR=${TEX_MAIN_PARENT}/pruefungen/aufgaben
 export BBW_REPETITIONS_AUFGABEN_DIR=${TEX_MAIN_PARENT}/cnt/includes/repetition
 
 #declare -x TEXINPUTS="${MAKE_DIR}:${TEX_LAYOUT_DIR}:${BBW_PRUEFUNGS_DIR}:${BBW_PRUEFUNGS_AUFGABEN_DIR}:${BBW_REPETITIONS_AUFGABEN_DIR}:${BBW_KAPITEL_DIR}:"
