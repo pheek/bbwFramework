@@ -1,5 +1,5 @@
-Nur das Framework
------------------
+Framework
+=========
 
 Keine Inhalte, Keine Prüfungen.
 
