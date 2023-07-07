@@ -17,6 +17,8 @@ chmod a-x *.tex
 
 makeindex ${article}.idx
 LATEX_TOOL=pdflatex
+##LATEX_TOOL=xelatex
+##LATEX_TOOL=lualatex
 #BIBALL=bibAll.bib
 
 echo "First processing ${LATEX_TOOL} .. ${ARTICLE_FILE_NAME}"

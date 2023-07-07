@@ -5,8 +5,27 @@
 %%
 %% Dieser Befehl ist auf der ersten Seite (nach \begin{document} zu starten.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\ptitlepage}{
+%%\usepackage{fontspec}
+%%\newcommand*{\zueriFont}{\fontfamily{QTHelvet-Black}\selectfont}
+\newcommand*{\zueriFont}{\fontfamily{phv}\selectfont\textbf}
+%%\newcommand*{\zueriFont}{{\setfont{QTHelvet-Black}}}
 
+%% Neue Version mit Züri Wappn
+
+\usepackage{eso-pic}
+  %% für background züri wappen siehe auch hier:
+%https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex :
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,%
+keepaspectratio]{logos/DreieckGruen.pdf}%
+\vfill
+}}}
+\newcommand{\ptitlepage}{
+\AddToShipoutPicture*{\BackgroundPic}
 	%% Tiefe der Index-Seite in Skripts über alle Jahre nur bis Stufe 2:
 	\ifisALLINONE{\setcounter{tocdepth}{2}}\fi{}
 
@@ -19,13 +38,15 @@
 			\colorbox{red}{Trainer-Version}\\
 			     {\ausrichtungAufTitelseite{} --- \doctitel}\\
 		}
-		\else {\Huge \color{black}\doctitel\\
+%%		\else {\Huge \color{black}\doctitel\\
+%%		\else {\Huge \color{black}{{\fontfamily{QTHelvet-Black} \doctitel}}\\
+		\else {\Huge \color{black}{\zueriFont\doctitel}\\
 		}
 		\fi
 
 		\vspace*{0.7cm}
 
-		{\large \noTRAINER{\ausrichtungAufTitelseite{} ---}\untertitel\\
+		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
 		}
 	\end{center}
 
@@ -37,9 +58,6 @@
 		\makebox{\includegraphics[width=7cm]{logos/loewe.pdf}}
 	\end{center}
 
-  %% für background züri wappen siehe auch hier:
-%https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex
-  
 	\vspace*{0.8cm}
 
 	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
@@ -59,6 +77,8 @@
 
 	\pagestyle{fancy}
 }%% END makro ptitlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %% Untertitel bei jeder section in den Skripts
