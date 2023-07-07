@@ -21,50 +21,60 @@
 \vfill
 \centering
 \includegraphics[width=\paperwidth,height=\paperheight,%
-keepaspectratio]{logos/DreieckGruen.pdf}%
+keepaspectratio]{logos/DreieckBlau.pdf}%
 \vfill
 }}}
 \newcommand{\ptitlepage}{
 \AddToShipoutPicture*{\BackgroundPic}
 	%% Tiefe der Index-Seite in Skripts über alle Jahre nur bis Stufe 2:
-	\ifisALLINONE{\setcounter{tocdepth}{2}}\fi{}
+\ifisALLINONE{\setcounter{tocdepth}{2}}\fi{}
 
   %% Kein Header und Footer auf der Frontseite
   \pagestyle{empty}
 
+		%% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
+  %%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
+
+  \begin{tabular}{ll}
+		\raisebox{-48mm}{\makebox{\includegraphics[width=5cm]{logos/loeweGruen.pdf}}}
+    &
+    \makecell[l]{%%
+      {\zueriFont{BBW Berufsbildungsschule Winterthur}}\\
+{\zueriFont{Berufsmaturitätsschule}}\\
+\vspace{3mm}\\
+{{\Huge \color{black}{\zueriFont\doctitel}}}\\
+     }%% end makecell
+    \end{tabular} 
+
+  \begin{center}
+		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
+		}
+    \end{center}
+
+  
 	\vspace*{0.5cm}
 	\begin{center}
 		\ifisTRAINER{\Huge
-			\colorbox{red}{Trainer-Version}\\
-			     {\ausrichtungAufTitelseite{} --- \doctitel}\\
+			\colorbox{red}{\zueriFont{Trainer-Version}}\\
+%%			     {\ausrichtungAufTitelseite{} --- \doctitel}\\
 		}
 %%		\else {\Huge \color{black}\doctitel\\
 %%		\else {\Huge \color{black}{{\fontfamily{QTHelvet-Black} \doctitel}}\\
-		\else {\Huge \color{black}{\zueriFont\doctitel}\\
-		}
+%%		}
 		\fi
 
 		\vspace*{0.7cm}
 
-		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
-		}
 	\end{center}
 
-	\vspace*{0.8cm}
-
-	\begin{center}
-		%% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
-%%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
-		\makebox{\includegraphics[width=7cm]{logos/loewe.pdf}}
-	\end{center}
-
-	\vspace*{0.8cm}
+	\noTRAINER{\vspace*{14mm}}
+  \TRAINER{\vspace*{8mm}}
 
 	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
 
 	\vspace*{2cm}
 
-	\ifisTRAINER{{\color{trainerFarbe} \textbf{TRAINER}: Hierbei handelt es sich um die Version mit Kommentaren für die Lehrkraft.}}\fi%%
+	\ifisTRAINER{{\color{trainerFarbe} \textbf{TRAINER}:\\ Hierbei handelt es\\ sich um die Version mit\\ Kommentaren für die Lehrkraft.}}\fi%%
 
 	\vfill
 
