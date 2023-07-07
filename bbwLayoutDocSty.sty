@@ -6,18 +6,21 @@
 %% Dieser Befehl ist auf der ersten Seite (nach \begin{document} zu starten.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%\usepackage{fontspec}
-%%\newcommand*{\zueriFont}{\fontfamily{QTHelvet-Black}\selectfont}
-\newcommand*{\zueriFont}{\fontfamily{qhv}\selectfont\textbf}
-%%\newcommand*{\zueriFont}{{\setfont{QTHelvet-Black}}}
+%%\newcommand*{\cdciFont}{\fontfamily{QTHelvet-Black}\selectfont}
+
+\newcommand{\myTitelFont}{qhv}
+
+\newcommand*{\cdciFont}{\fontfamily{\myTitelFont}\selectfont\textbf}
+%%\newfontfamily\cdciFont{qhv}%%{Linux Libertine O}
+
+
+%%\usepackage{sectsty}
 
 
 %%\usepackage{sectsty}
 %%\allsectionsfont{qhv}
 
 %%\usepackage[qhv]{titlesec}
-
-
-%% Neue Version mit Züri Wappn
 
   %% für background züri wappen siehe auch hier:
 %https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex :
@@ -32,8 +35,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newcommand{\ptitlepage}{
-\AddToShipoutPicture*{\BackgroundPic}
-	%% Tiefe der Index-Seite in Skripts über alle Jahre nur bis Stufe 2:
+  \AddToShipoutPicture*{\BackgroundPic}
+
+
+%%  \allsectionsfont{\sffamily}
+%%\allsectionsfont{\normalfont\sffamily\bfseries}
+
+  %% Tiefe der Index-Seite in Skripts über alle Jahre nur bis Stufe 2:
 \ifisALLINONE{\setcounter{tocdepth}{2}}\fi{}
 
   %% Kein Header und Footer auf der Frontseite
@@ -46,20 +54,20 @@
 		\raisebox{-20mm}{\makebox{\includegraphics[width=38mm]{logos/loewe.pdf}}}
     &
     \makecell[l]{%%
-      {\zueriFont{BBW Berufsbildungsschule Winterthur}}\\
-{\zueriFont{Berufsmaturitätsschule}}\\
+      {\cdciFont{BBW Berufsbildungsschule Winterthur}}\\
+{\cdciFont{Berufsmaturitätsschule}}\\
 \vspace{21mm}\\
-{{\Huge \color{black}{\zueriFont\doctitel}}}\\
+{{\Huge \color{black}{\cdciFont\doctitel}}}\\
     }%% end makecell
     \\
-    & {\zueriFont\untertitel}\\
+    & {\cdciFont\untertitel}\\
     \end{tabular} 
 
-\hspace{44mm}\noTRAINER{\zueriFont\ausrichtungAufTitelseite{}} 
+\hspace{44mm}\noTRAINER{\cdciFont\ausrichtungAufTitelseite{}} 
 
   
 %  \begin{center}
-%		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
+%		{\large \noTRAINER{{\cdciFont\ausrichtungAufTitelseite{}} ---}{\cdciFont\untertitel}\\
 %		}
  %   \end{center}
 
@@ -67,7 +75,7 @@
 	\vspace*{0.5cm}
 	\begin{center}
 		\ifisTRAINER{\Huge
-			\colorbox{red}{\zueriFont{Trainer-Version}}\\
+			\colorbox{red}{\cdciFont{Trainer-Version}}\\
 %%			     {\ausrichtungAufTitelseite{} --- \doctitel}\\
 		}
 %%		\else {\Huge \color{black}\doctitel\\
