@@ -99,7 +99,6 @@
 %%  --> Notizfeld mit 10 Leerzeilen
 \newcounter{DFCounter}
 
-
 %%Häuschenpapier
 \newcommand{\mmPapierZwei}[2]{\begin{tikzpicture}
 %%  \draw[step=4mm,bbwMMFarbe,ultra thin]
@@ -170,10 +169,10 @@ z.\,B.
 %% Dieses Kommando sollte im Kommando «\untertitel» eingesetzt werden.
 %%
 \newcommand*\ausrichtungAufTitelseite{%
-\ifisTALS{TALS\noTRAINER{\footnote{TALS «Technik, Architektur und Life Sciences
-(Laboranten)»: Ausrichtung technisches Profil}}}%%
+\ifisTALS{TALS\noTRAINER{\footnote{{\zueriFont{TALS «Technik, Architektur und Life Sciences
+(Laboranten)»: Ausrichtung technisches Profil}}}}}%%
 \fi%%
-\ifisGESO{GESO\noTRAINER{\footnote{GESO: Ausrichtung \textbf{Ge}sundheit und \textbf{So}ziales}}}%%
+\ifisGESO{GESO\noTRAINER{\footnote{{\zueriFont{GESO: Ausrichtung \textbf{Ge}sundheit und \textbf{So}ziales}}}}}%%
 \fi}%%
 
 %%%%%%%%%%%%%%%%%%%%%% B B W - M a t h e   F a r b c o d e s  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555

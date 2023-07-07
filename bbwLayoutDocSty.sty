@@ -7,12 +7,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%\usepackage{fontspec}
 %%\newcommand*{\zueriFont}{\fontfamily{QTHelvet-Black}\selectfont}
-\newcommand*{\zueriFont}{\fontfamily{phv}\selectfont\textbf}
+\newcommand*{\zueriFont}{\fontfamily{qhv}\selectfont\textbf}
 %%\newcommand*{\zueriFont}{{\setfont{QTHelvet-Black}}}
+
+
+%%\usepackage{sectsty}
+%%\allsectionsfont{qhv}
+
+%%\usepackage[qhv]{titlesec}
+
 
 %% Neue Version mit Züri Wappn
 
-\usepackage{eso-pic}
   %% für background züri wappen siehe auch hier:
 %https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex :
 \newcommand\BackgroundPic{%
@@ -20,10 +26,11 @@
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
 \centering
-\includegraphics[width=\paperwidth,height=\paperheight,%
-keepaspectratio]{logos/DreieckBlau.pdf}%
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{logos/DreieckBlau.pdf}%
 \vfill
 }}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newcommand{\ptitlepage}{
 \AddToShipoutPicture*{\BackgroundPic}
 	%% Tiefe der Index-Seite in Skripts über alle Jahre nur bis Stufe 2:
@@ -34,22 +41,27 @@ keepaspectratio]{logos/DreieckBlau.pdf}%
 
 		%% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
   %%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
-
+\vspace{-22mm}
   \begin{tabular}{ll}
-		\raisebox{-48mm}{\makebox{\includegraphics[width=5cm]{logos/loeweGruen.pdf}}}
+		\raisebox{-20mm}{\makebox{\includegraphics[width=38mm]{logos/loewe.pdf}}}
     &
     \makecell[l]{%%
       {\zueriFont{BBW Berufsbildungsschule Winterthur}}\\
 {\zueriFont{Berufsmaturitätsschule}}\\
-\vspace{3mm}\\
+\vspace{21mm}\\
 {{\Huge \color{black}{\zueriFont\doctitel}}}\\
-     }%% end makecell
+    }%% end makecell
+    \\
+    & {\zueriFont\untertitel}\\
     \end{tabular} 
 
-  \begin{center}
-		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
-		}
-    \end{center}
+\hspace{44mm}\noTRAINER{\zueriFont\ausrichtungAufTitelseite{}} 
+
+  
+%  \begin{center}
+%		{\large \noTRAINER{{\zueriFont\ausrichtungAufTitelseite{}} ---}{\zueriFont\untertitel}\\
+%		}
+ %   \end{center}
 
   
 	\vspace*{0.5cm}
