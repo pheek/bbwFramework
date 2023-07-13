@@ -21,7 +21,7 @@
 
   %% für background züri wappen siehe auch hier:
 %https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex :
-\newcommand\BackgroundPic{%
+\newcommand\BackgroundPicWappen{%
 \put(0,0){%
 \parbox[b][\paperheight]{\paperwidth}{%
 \vfill
@@ -30,10 +30,34 @@
 \vfill
 }}}
 
+
+\newcommand\BackgroundPicBubbles{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+%%\centering
+\hspace{32mm}\includegraphics[width=113mm,height=111mm,keepaspectratio]{logos/Bubbles.png}%
+\vspace{116mm}
+}}}
+
+\newcommand\BackgroundPicHellblauesRechteck{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=157mm,height=124mm,keepaspectratio]{logos/hellblauesRechteck.pdf}%
+\vspace{24mm}
+%%\vfill
+}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newcommand{\ptitlepage}{
-  \AddToShipoutPicture*{\BackgroundPic}
+  \newgeometry{top=12mm, left=17mm}
 
+  \AddToShipoutPicture*{\BackgroundPicHellblauesRechteck}
+  \AddToShipoutPicture*{\BackgroundPicBubbles}
+
+  
 
 %%  \allsectionsfont{\sffamily}
 %%\allsectionsfont{\normalfont\sffamily\bfseries}
@@ -42,25 +66,28 @@
 \ifisALLINONE{\setcounter{tocdepth}{2}}\fi{}
 
   %% Kein Header und Footer auf der Frontseite
-  \pagestyle{empty}
+\pagestyle{empty}
 
 		%% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
   %%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
-\vspace{-22mm}
-  \begin{tabular}{ll}
-		\raisebox{-20mm}{\makebox{\includegraphics[width=38mm]{logos/loewe.pdf}}}
-    &
+\vspace{-60mm}
+  \begin{tabular}{lll}
+		\hspace{-5mm}\raisebox{-10mm}{\makebox{\includegraphics[width=16mm]{logos/loewe.pdf}}}
+    &\vspace{-13mm}\raisebox{-1mm}{\makebox{\includegraphics[width=4.5mm]{logos/wappenSchwarz.png}}}&
     \makecell[l]{%%
-      {\cdciFont{BBW Berufsbildungsschule Winterthur}}\\
-{\cdciFont{Berufsmaturitätsschule}}\\
-\vspace{21mm}\\
-{{\huge \color{black}{\cdciFont\doctitel}}}\\
+      {\cdciFont{\small{BBW Berufsbildungsschule Winterthur}}}\\
+{\cdciFont{\footnotesize{Berufsmaturitätsschule | Mathematik}}}\\
     }%% end makecell
     \\
-    & {\cdciFont\untertitel}\\
     \end{tabular} 
 
-\hspace{44mm}\noTRAINER{\cdciFont\ausrichtungAufTitelseite{}} 
+  \vspace{22mm}
+
+\hspace{27mm}{{\huge \color{bbwFarbe}{\cdciFont\doctitel}}}
+
+\hspace{27mm}{\cdciFont\untertitel}
+
+\hspace{27mm}\noTRAINER{\cdciFont\ausrichtungAufTitelseite{}} 
 
   
 %  \begin{center}
@@ -69,9 +96,9 @@
  %   \end{center}
 
   
-	\vspace*{0.5cm}
+	\vspace*{105mm}
 	\begin{center}
-		\ifisTRAINER{\Huge
+		\ifisTRAINER{\hspace{6mm}\Huge
 			\colorbox{red}{\cdciFont{Trainer-Version}}\\
 %%			     {\ausrichtungAufTitelseite{} --- \doctitel}\\
 		}
@@ -80,23 +107,26 @@
 %%		}
 		\fi
 
-		\vspace*{0.7cm}
-
 	\end{center}
 
 	\noTRAINER{\vspace*{14mm}}
   \TRAINER{\vspace*{8mm}}
 
-	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
+  %%	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
+  
+	\ifisTRAINER{{\color{trainerFarbe}
+     
+      \hspace{60mm} Hierbei handelt es
 
-	\vspace*{2cm}
+      \hspace{60mm} sich um die Version mit
 
-	\ifisTRAINER{{\color{trainerFarbe} \textbf{TRAINER}:\\ Hierbei handelt es\\ sich um die Version mit\\ Kommentaren für die Lehrkraft.}}\fi%%
+      \hspace{60mm} Kommentaren für die Lehrkraft.}}\fi%%
 
-	\vfill
+%%	\vfill
 
 	\thispagestyle{empty}
 
+  \restoregeometry{}
 	\newpage
 	\impressum
 
@@ -131,6 +161,8 @@
 }%% END makro \scriptStart
 
 
+
+
 %% END Script
 \newcommand{\scriptEnde}{
 
@@ -142,6 +174,8 @@
 
 \end{document}
 }%% end makro \scriptEnde
+
+
 
 
 \newcommand{\defaultScript}[1]{
