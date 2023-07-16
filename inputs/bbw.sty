@@ -4,6 +4,14 @@
 
 \usepackage{inputs/bbwColors}
 
+%% Font
+\newcommand{\myTitelFont}{qhv}
+\newcommand*{\cdciFont}{\fontfamily{\myTitelFont}\selectfont\textbf}
+
+%% Font neues Layout 2023
+\renewcommand{\rmdefault}{qhv} % Helvetica
+\renewcommand{\sfdefault}{qhv} % " 
+
 
 \headheight30pt%
 
@@ -78,8 +86,6 @@
 \newcommand{\topRightHeader}{\begin{tabular}{cl}\makebox{\raisebox{-1.5mm}{\includegraphics[width=5mm]{logos/ZueriWappenCyan.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{BBW Berufsbildungsschule Winterthur}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{Berufsmaturitätsschule | Mathematik}}}\\{\tiny{\cdciFont{Skript}}}}\end{tabular}}
 
 
-\newcommand{\myTitelFont}{qhv}
-\newcommand*{\cdciFont}{\fontfamily{\myTitelFont}\selectfont\textbf}
 
 %%\titleformat{\part}{\normalfont\Huge\bfseries\color{titelFarbe}}{\thepart}{1em}{}%%
 %\titleformat{\section}{\normalfont\huge\bfseries\color{titelFarbe}}{\thesection}{1em}{}%%
