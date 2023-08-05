@@ -110,6 +110,19 @@
 
 \newcommand{\bbwArrow}[3]{\draw[thick,color=#3,->] (#1)--(#2);}
 
+%% Strecke mit zwei Endpunkten
+%% #1, #2: Koordinaten der Endpunkte
+%% #3: Ort der Beschriftung
+%% #4: Beschtiftung (z. B. "a)")
+%% #5: farbe der Strecke und der Beschriftung
+\newcommand{\bbwStrecke}[5]{%%
+\bbwLine{#1}{#2}{#5}%
+\bbwDot{#1}{#5}{west}{}%
+\bbwDot{#2}{#5}{west}{}%
+\draw (#3) node{{\color{#5}#4}};
+}%%
+
+
 
 %% Draw a single letter or small text
 % #1: Position eg  4,4
