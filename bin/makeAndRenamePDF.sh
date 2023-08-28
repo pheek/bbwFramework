@@ -7,7 +7,6 @@
 # and rebuild the pdf.
 #
 
-
 rm -f ${TEX_LAYOUT_DIR}/zielgruppe.tex
 ln -s ${TEX_LAYOUT_DIR}/zielgruppe_${ZIELGRUPPE}.tex ${TEX_LAYOUT_DIR}/zielgruppe.tex
 
@@ -60,5 +59,6 @@ ${LATEX_TOOL} ${ARTICLE_FILE_NAME}
 
 mv ${ARTICLE_FILE_NAME}.pdf ${ARTICLE_FILE_NAME}_${ZIELGRUPPE}.pdf
 
+## open evince (or other command) to show the PDF:
 ${SHOW_COMMAND_FOR_PDF} ${ARTICLE_FILE_NAME}_${ZIELGRUPPE}.pdf &
   
