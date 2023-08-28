@@ -241,8 +241,13 @@
 %% Lösungsmenge für x
 \newcommand{\lx}{\mathbb{L}_x}
 
+
+%vectors:
+%%\AtBeginDocument{\renewcommand{\vec}[1]{\overrightarrow{#1}}}
+
 %%% Spaltenvektor
 %% \Spvec{2;-1} oder \Spvec[c]{3;c;-4}
+%% from here: https://tex.stackexchange.com/questions/2705/typesetting-column-vector
 \makeatletter
 \newcommand{\Spvek}[2][r]{%
   \gdef\@VORNE{1}
@@ -261,3 +266,4 @@
     \expandafter\xvekSp@lten
   \fi}
 \makeatother
+
