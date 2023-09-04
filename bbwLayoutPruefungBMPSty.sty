@@ -36,9 +36,9 @@
   Hilfsmittel\footnote{Handy, Smartwatch, Pad, Laptop, (ebenfalls Kollega), 
     ... Zuwiderhandlung kann zu disziplinarischen Maßnahmen führen.}!}}
 
-\newcommand{\vielGlueck}{
+\newcommand{\vielGlueck}{%%
 
-\textit{Viel Glück!}}
+\textit{Viel Glück!}}%%
 
 
 \newcommand{\inPapierform}{sowie \achtAvier{}.}
@@ -57,7 +57,7 @@
   sind Schreibzeug, \inPapierform{}
   
   Der Taschenrechner \textbf{darf verwendet}
-  werden.}
+  werden.}%%
 
 %%%%%%%%%%%%%%%%%%%%%%% P A C K A G E S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -71,16 +71,6 @@
 
 \newcounter{frageCounter}
 \setcounter{frageCounter}{1}
-
-%%\newenvironment{fragn}{%%
-%%  \arabic{frageCounter}\stepcounter{frageCounter}%%
-%%  \begin{tabular}{p{169mm}}%%
-%%  \hline\\%%
-%%}{\end{tabular}}
-
-%%\newenvironment{frageXXX}[2][def]{(#1,#2)\begingroup}{\endgroup}
-
-%%\newcommand{\leserluft}{\vspace{2mm}}
 
 \newcounter{tmpCounter}
 \newenvironment{frageALT}[1][def]{%%
@@ -108,7 +98,7 @@
 
 %% Multicolumn nur wichtig, damit die Ränder hier nicht angezeigt werden.
 \begin{tabular}{p{178mm}}%%
-\multicolumn{1}{p{171mm}}{\vspace{2mm}\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
+\multicolumn{1}{p{171mm}}{\vspace{1mm}\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
 \,\,[\arabic{tmpCounter} Pkt.]:} \noTRAINER{\hspace*{\fill} $\Box$
   s. separates Lösungsblatt \textbf{\hspace*{\fill}Pkt.: ......}}}\\%%
 }{\\\end{tabular}\vspace{4mm}\endgroup}
@@ -140,8 +130,6 @@
 }%% END environment "frage"
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-
-
 %% Wahr/Falsch Boxen
 %% Aufruf \wahrbox{wahr}, falls das Resultat wahr ist
 %% Aufruf \wahrbox{falsch}, falls ``falsch'' angegeben werden muss.
@@ -155,5 +143,7 @@
 %% Muss etwas schmaler sein, weil jede Frage einen Rahmen darum herum hat.
 \renewcommand{\mmPapier}[1]{\mmPapierZwei{#1}{17.6}}
 
-%% oder einfach \Box oder für trainer true: \BoxT
+%% oder einfach \Box falls nicht anzukreuzen und für anzukreuzen:
+%% \BoxT
+%% Beispiel Kreuzen Sie ja \BoxT{} an und nicht nein \Box{}
 \newcommand{\BoxT}{\TRAINER{\color{green} x}\noTRAINER{\Box}}
