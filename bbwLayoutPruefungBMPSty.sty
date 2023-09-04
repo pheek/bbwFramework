@@ -30,6 +30,7 @@
 \textit{Lösungswege können zur Bewertung herangezogen werden.}\footnote{\unloesbarkeitsklausel{}}
 }
 
+
 \newcommand{\kommunikationsausschluss}{
 
 \textit{Keine Kommunikation untereinander, keine unlauteren
@@ -39,6 +40,8 @@
 \newcommand{\vielGlueck}{%%
 
 \textit{Viel Glück!}}%%
+
+
 
 
 \newcommand{\inPapierform}{sowie \achtAvier{}.}
@@ -73,24 +76,18 @@
 \setcounter{frageCounter}{1}
 
 \newcounter{tmpCounter}
-\newenvironment{frageALT}[1][def]{%%
-\setcounter{tmpCounter}{#1}%%
-\addtocounter{maxpunkte}{\value{tmpCounter}}%%
-\begingroup
-
-%% Multicolumn nur wichtig, damit die Ränder hier nicht angezeigt werden.
-\begin{tabular}{p{176mm}}%%
-\multicolumn{1}{l}{\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
-\,\,[\arabic{tmpCounter} Pkt.]:}}\\ %%
-{}%\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
-%\,\,[\arabic{tmpCounter} Pkt.]}%%
-
-}{\\%%
-\end{tabular}\noTRAINER{\parbox[c]{20mm}{{\ ......}\\*{\-\ Pkt.}}}\vspace{4mm}\endgroup}
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  environment "frage"
 %%
+
+\newcommand{\frageTitelZeile}{%%
+\vspace{1mm}\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
+\,\,[\arabic{tmpCounter} Pkt.]:} \noTRAINER{\hspace*{\fill} $\Box$
+  s. separates Lösungsblatt \textbf{\hspace*{\fill}Pkt.: ......}}%%
+}%% end command \frageTitelZeile
+
+
 \newenvironment{frage}[1][def]{%%
 \setcounter{tmpCounter}{#1}%%
 \addtocounter{maxpunkte}{\value{tmpCounter}}%%
@@ -98,36 +95,79 @@
 
 %% Multicolumn nur wichtig, damit die Ränder hier nicht angezeigt werden.
 \begin{tabular}{p{178mm}}%%
-\multicolumn{1}{p{171mm}}{\vspace{1mm}\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
-\,\,[\arabic{tmpCounter} Pkt.]:} \noTRAINER{\hspace*{\fill} $\Box$
-  s. separates Lösungsblatt \textbf{\hspace*{\fill}Pkt.: ......}}}\\%%
+\multicolumn{1}{p{171mm}}{\frageTitelZeile}\\%%
 }{\\\end{tabular}\vspace{4mm}\endgroup}
 
 \newtotcounter{maxpunkte}
-\newcommand{\pruefungsIntro}{\setcounter{maxpunkte}{0}%%
-  \,%% force some vspace after header line
 
-\begin{tabular}{|l@{: }ll@{: }p{34mm}|}%%
-\hline%%
-  Thema                             & \pruefungsThema{}            & Prüfungsdatum           & \pruefungsDatum{}                      \\%%
-  Prüfungsnummer                    & \pruefungsNummer{}           & Prüfungsteil            & \pruefungsTeil{}                       \\%%
-  Klasse                            & \klasse{}                    & Vorgabezeit             & \pruefungsVorgabeZeit{}               \\%%
-  \textbf{Vorname}                  & \noTRAINER{............................}%%
-                            \TRAINER{{\color{red}Lehrer/Lösungen}} & \textbf{Familienname}   & ............................\\%%
-  Punkte (Max.\,\total{maxpunkte})  & ............................ & Note                    & ............................              \\%%
-\hline%%
-\end{tabular}%%
-\vspace{1mm}\\%%
-\textbf{Hilfsmittel}: \pruefungsHilfsmittel{}\\
-\kommunikationsausschluss{}\loesungswegsklausel{}\vielGlueck{}\\%%
+\newcommand{\loeweUndWappen}{Löwe hier}
+
+\newcommand{\pruefungsIntro}{\setcounter{maxpunkte}{0}%%
+  
+  \thispagestyle{empty}
+  
+%\begin{tabular}{|l@{: }ll@{: }p{34mm}|}%%
+%\hline%%
+%  Thema                             & \pruefungsThema{}            & Prüfungsdatum           & \pruefungsDatum{}                      \\%%
+%  Prüfungsnummer                    & \pruefungsNummer{}           & Prüfungsteil            & \pruefungsTeil{}                       \\%%
+%  Klasse                            & \klasse{}                    & Vorgabezeit             & \pruefungsVorgabeZeit{}               \\%%
+%  \textbf{Vorname}                  & \noTRAINER{............................}%%
+%                            \TRAINER{{\color{red}Lehrer/Lösungen}} & \textbf{Familienname}   & ............................\\%%
+%  Punkte (Max.\,\total{maxpunkte})  & ............................ & Note                    & ............................              \\%%
+%\hline%%
+%\end{tabular}%%
+%\vspace{1mm}\\%%
+%\textbf{Hilfsmittel}: \pruefungsHilfsmittel{}\\
+%\kommunikationsausschluss{}\loesungswegsklausel{}\vielGlueck{}\\%%
 %%\textit{Lösungswege können zur Bewertung herangezogen werden.}\\%%
-\vspace{-1mm}%%
-\setcounter{maxpunkte}{0}%%
-\TRAINER{
-  \begin{center}\Huge{\color{red}Lösungen}\end{center}
+%\vspace{-1mm}%%
+%\setcounter{maxpunkte}{0}%%
+%\TRAINER{
+%  \begin{center}\Huge{\color{red}Lösungen}\end{center}
+%  \newpage
+  %}%% END TRAINER
+
+  
+\begin{tabular}{rp{150mm}}
+  \raisebox{100mm}{\loeweUndWappen} & \makecell[l]{
+    Kanton Zürich\\
+    Bildungsdirektion\\
+    \textbf{KBM - Kommission Berufsmaturität}\\
+    \huge{\textbf{Berufsmaturitätsprüfung 2023}}\\
+    \vspace{20mm}\\
+    \huge{\textbf{Mathematik \hspace*{50mm} Serie 1}}\\
+    \vspace{5mm}\\
+    \huge{\textbf{Ausrichtung: \ausrichtung{}}}\\
+    \hline\\
+    \begin{tabular}{ll}
+      Dauer: & 120 Minuten\\
+      Hilfsmittel: & nicht grafik- und nicht netzfähiger Taschenrechner ohne CAS\\
+                  & Formelsammlung max. 8 A4-Seiten (4 A4-Blätter),
+      mitzubringen ({\color{red}???})\\
+      Hinweise:
+        & Dokumentenechte Schreibmedien benützen. Kein Rot verwenden.\\
+        & Bleistift ist nur für Zeichnungen erlaubt.\\
+        & Die Aufgaben sind im dafür vorgesehenen Feld zu lösen.\\
+        & Ungültiges ist zu streichen.\\
+        & Der Lösungsweg muss vollständig ersichtlich sein.\\
+        & Die Ergebnisse sind zu unterstreichen.\\
+        & Fehlende Einheiten und falsche Rundungen ergeben Punkteabzug.\\\hline
+    \end{tabular}\\
+    \vspace{3mm}\\
+    Name / Vorname: \\
+    Klasse / Prüfungsnummer : \\
+    \begin{tabular}{|l|l|l|l|}\hline
+      Punkte & Maximum & Ergebnis & Zweitkorrektur\\\hline
+      Total  &    94   &          &               \\\hline
+      Note   &         &          &               \\\hline
+    \end{tabular}
+  }%% end makecell
+\end{tabular}
+
   \newpage
-}%% END TRAINER
-}%% END environment "frage"
+}%% END command prüfungsIntro"
+
+
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 %% Wahr/Falsch Boxen
@@ -141,7 +181,7 @@
 \newcommand{\bbwCheckBox}[2]{\ifstrequal{#1}{true}{\TRAINER{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{$\times$}}}\noTRAINER{$\Box$}}{$\Box$} #2}
 
 %% Muss etwas schmaler sein, weil jede Frage einen Rahmen darum herum hat.
-\renewcommand{\mmPapier}[1]{\mmPapierZwei{#1}{17.6}}
+\renewcommand{\mmPapier}[1]{\mmPapierZwei{#1}{18}}
 
 %% oder einfach \Box falls nicht anzukreuzen und für anzukreuzen:
 %% \BoxT
