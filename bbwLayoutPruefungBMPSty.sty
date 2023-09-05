@@ -14,6 +14,7 @@
 \newcommand{\pruefungsVorgabeZeit}{Pruefungsvorgabezeit mit renewcommand «pruefungsVorgabeZeit» überschreiben.}
 \newcommand{\pruefungsHilfsmittel}{\colorbox{red}{Pruefungshilfsmittel mit renewcommand «pruefungsHilfsmittel» überschreiben.}}
 
+\newcommand{\pruefungsSerie}{XX}
 
 \newcommand{\unloesbarkeitsklausel}{Lösungen ohne Rechenweg werden
   nicht berücksichtigt. Als Lösungsweg darf hingegen [TR] für
@@ -134,7 +135,7 @@
     \vspace{2mm}\\
     \Large{\textbf{Berufsmaturitätsprüfung 2024}}\\
     \vspace{20mm}\\
-    \Large{\textbf{Mathematik \hspace*{100mm} Serie: 1}}\\
+    \Large{\textbf{Mathematik \hspace*{100mm} Serie: \pruefungsSerie{}}}\\
     \vspace{-1mm}\\
     \Large{\textbf{Ausrichtung: \ausrichtung{}}}\\
     \vspace{-2mm}\\
@@ -187,10 +188,11 @@ Punkteabzug.\\
         Expert/in: \hrulefill\\
     \small{Die Unterschrift der Expertin oder des Experten ist einzig
       bei denjenigen Prüfungen notwendig,}\\
-      \small{bei denen eine Zweitkorrektur erfolgt ist.}
+      \small{bei denen eine Zweitkorrektur erfolgt ist.}%%
   }%% end makecell
-\end{tabular}
-\end{changemargin}
+\end{tabular}%%
+  \end{changemargin}
+  \setlength{\headheight}{5mm}
   \newpage
 }%% END command prüfungsIntro"
 
