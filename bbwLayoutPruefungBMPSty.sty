@@ -2,7 +2,6 @@
 %% %% %% %%
 
 %%  In den Dokumenten können die folgenden Attribute überschrieben werden:
-
 %% \thema
 \newcommand{\pruefungsThema}{Pruefungsthema mit renewcommand «pruefungsThema» überschreiben.}
 %% \klasse
@@ -42,8 +41,6 @@
 \textit{Viel Glück!}}%%
 
 
-
-
 \newcommand{\inPapierform}{sowie \achtAvier{}.}
 %% Mögliche erlaubte Papierunterlagen.
 \newcommand{\achtAvier}{acht A4-Seiten mit beliebigem Inhalt und die
@@ -70,7 +67,7 @@
 \usepackage{totcount}
 
 %% LAYOUT FUER PRUEFUNGEN %%
-\headheight2pt
+\headheight-15pt
 
 \newcounter{frageCounter}
 \setcounter{frageCounter}{1}
@@ -88,6 +85,7 @@
 }%% end command \frageTitelZeile
 
 
+
 \newenvironment{frage}[1][def]{%%
 \setcounter{tmpCounter}{#1}%%
 \addtocounter{maxpunkte}{\value{tmpCounter}}%%
@@ -100,9 +98,11 @@
 
 \newtotcounter{maxpunkte}
 
-\newcommand{\loeweUndWappen}{Löwe hier}
+\newcommand{\loeweUndWappen}[1]{\includegraphics[width=#1]{logos/LoeweMitWappen.pdf}}
 
 \newcommand{\pruefungsIntro}{\setcounter{maxpunkte}{0}%%
+
+  \begin{changemargin}{-12mm}{-11mm}{-29mm}{0mm}
   
   \thispagestyle{empty}
   
@@ -126,44 +126,71 @@
 %  \begin{center}\Huge{\color{red}Lösungen}\end{center}
 %  \newpage
   %}%% END TRAINER
-
-  
 \begin{tabular}{rp{150mm}}
-  \raisebox{100mm}{\loeweUndWappen} & \makecell[l]{
+  \raisebox{88mm}{\loeweUndWappen{31mm}} & \makecell[l]{
     Kanton Zürich\\
     Bildungsdirektion\\
     \textbf{KBM - Kommission Berufsmaturität}\\
-    \huge{\textbf{Berufsmaturitätsprüfung 2023}}\\
+    \vspace{2mm}\\
+    \Large{\textbf{Berufsmaturitätsprüfung 2024}}\\
     \vspace{20mm}\\
-    \huge{\textbf{Mathematik \hspace*{50mm} Serie 1}}\\
-    \vspace{5mm}\\
-    \huge{\textbf{Ausrichtung: \ausrichtung{}}}\\
+    \Large{\textbf{Mathematik \hspace*{100mm} Serie: 1}}\\
+    \vspace{-1mm}\\
+    \Large{\textbf{Ausrichtung: \ausrichtung{}}}\\
+    \vspace{-2mm}\\
     \hline\\
-    \begin{tabular}{ll}
-      Dauer: & 120 Minuten\\
-      Hilfsmittel: & nicht grafik- und nicht netzfähiger Taschenrechner ohne CAS\\
-                  & Formelsammlung max. 8 A4-Seiten (4 A4-Blätter),
-      mitzubringen ({\color{red}???})\\
-      Hinweise:
+    \begin{tabular}{lp{130mm}}
+\textbf{Dauer:} & \textbf{120 Minuten}\\
+\vspace{-2mm}\\%%
+\textbf{Hilfsmittel:} & \textbf{nicht grafik- und nicht netzfähiger Taschenrechner ohne CAS}\\
+\vspace{-2mm}\\%%
+                  & \textbf{Formelsammlung max. 8 A4-Seiten (4 A4-Blätter),
+      mitzubringen} ({\color{red}???})\\
+\vspace{-2mm}\\%%
+      \textbf{Hinweise:}
         & Dokumentenechte Schreibmedien benützen. Kein Rot verwenden.\\
+\vspace{-2mm}\\%%
         & Bleistift ist nur für Zeichnungen erlaubt.\\
+\vspace{-2mm}\\%%
         & Die Aufgaben sind im dafür vorgesehenen Feld zu lösen.\\
+\vspace{-2mm}\\%%
         & Ungültiges ist zu streichen.\\
+\vspace{-2mm}\\%%
         & Der Lösungsweg muss vollständig ersichtlich sein.\\
+\vspace{-2mm}\\%%
         & Die Ergebnisse sind zu unterstreichen.\\
-        & Fehlende Einheiten und falsche Rundungen ergeben Punkteabzug.\\\hline
+\vspace{-2mm}\\%%
+        & Fehlende Einheiten und falsche Rundungen ergeben
+Punkteabzug.\\
+\vspace{-2mm}\\
+\hline
     \end{tabular}\\
     \vspace{3mm}\\
-    Name / Vorname: \\
-    Klasse / Prüfungsnummer : \\
-    \begin{tabular}{|l|l|l|l|}\hline
-      Punkte & Maximum & Ergebnis & Zweitkorrektur\\\hline
-      Total  &    94   &          &               \\\hline
-      Note   &         &          &               \\\hline
+    \textbf{Name / Vorname}\hspace{21mm}\hrulefill\hrulefill\hrulefill\hrulefill\hrulefill\\
+    \vspace{-1mm}\\
+    \textbf{Klasse /
+      Prüfungsnummer}\,\,\hrulefill\hrulefill\hrulefill\hrulefill\hrulefill\,\,
+    Datum: 17.5.2024\\
+%%
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{35mm}|p{35mm}|p{35mm}|p{35mm}|}\hline
+      Punkte & Maximum & Ergebnis      & Zweitkorrektur\\\hline
+      Total  &    \textbf{93 Punkte}   &          &               \\\hline
+      Note   &  \cellcolor{gray!75}    &          &               \\\hline
     \end{tabular}
+    \renewcommand{\arraystretch}{1}\\
+\vspace{-3mm}\\
+    (Datum/Unterschrift)\\
+\vspace{-3mm}\\
+    Examinator/in: \hrulefill\\
+\vspace{-3mm}\\
+        Expert/in: \hrulefill\\
+    \small{Die Unterschrift der Expertin oder des Experten ist einzig
+      bei denjenigen Prüfungen notwendig,}\\
+      \small{bei denen eine Zweitkorrektur erfolgt ist.}
   }%% end makecell
 \end{tabular}
-
+\end{changemargin}
   \newpage
 }%% END command prüfungsIntro"
 
