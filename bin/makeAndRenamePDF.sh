@@ -61,4 +61,3 @@ mv ${ARTICLE_FILE_NAME}.pdf ${ARTICLE_FILE_NAME}_${ZIELGRUPPE}.pdf
 
 ## open evince (or other command) to show the PDF:
 ${SHOW_COMMAND_FOR_PDF} ${ARTICLE_FILE_NAME}_${ZIELGRUPPE}.pdf &
-  
