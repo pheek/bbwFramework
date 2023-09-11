@@ -1,0 +1,64 @@
+%% Koordinatensystem von 0 - 360 Grad (y -Ricthung -1 bis 1
+%% Die Funktion kann mit dem 1. Parameter eingegeben werden
+\newcommand{\trigsysAFct}[1]{
+\coordSysBBWFlex{0.5cm}{-1}{13}{-4}{4}{\varphi}{#1}{
+  \foreach \x [evaluate=\x as \degree using int(\x*30)] in {1,...,12}{ 
+    \draw (\x cm, 1pt) -- (\x cm, -1pt) node[anchor = north] {$\degree^\circ$};
+  }
+  \foreach \y in {-3,-2,-1,1,2,3}{
+   \draw (1pt, \y cm) -- (-1pt, \y cm) node[anchor = east] {$\y$};
+  }
+}
+}%% end trigsysC
+
+%% Leeres Koordinatensystem (fct = 0)
+\newcommand{\trigsysA}{\trigsysAFct{0}}
+
+
+%% Koordinatensystem von -270 bis 450 Grad. In y-Richtung von -2 bis 2
+%% Funktion wird mit #1-Parameter angegeben
+\newcommand{\trigsysBFct}[1]{
+\coordSysBBWFlex{0.5cm}{-1}{13}{-4}{4}{\varphi}{#1}{
+  \foreach \x [evaluate=\x as \degree using int(\x*30)] in {1,...,12}{ 
+    \draw (\x cm, 1pt) -- (\x cm, -1pt) node[anchor = north] {$\degree^\circ$};
+  }
+  \foreach \y in {-1,1}{
+   \draw (1pt, \y *3cm) -- (-1pt, \y *3cm) node[anchor = east] {$\y$};
+  }
+}
+}%% end trigsysC
+
+%% Leeres B-System
+\newcommand{\trigsysB}{\trigsysBFct{0}}
+
+
+%% Wie B-SYstem, jedoch in y-Richtung von -1 bis +1
+\newcommand{\trigsysCFct}[1]{
+\coordSysBBWFlex{0.2cm}{-6}{10}{-2.5}{2.5}{\varphi}{#1}{
+  \foreach \x [evaluate=\x as \degree using int(\x*90)] in {-3,-2,-1,1,2,3,4,5}{ 
+   \draw (\x *18mm, 1pt) -- (\x * 18mm, -1pt) node[anchor = north] {$\degree^\circ$};
+  }
+   
+  \foreach \y in {-2,-1,1,2}{
+    \draw (1pt, \y cm) -- (-1pt, \y cm) node[anchor = east] {$\y$};
+  }
+}
+}%% end trigsysC
+
+\newcommand{\trigsysC}{\trigsysCFct{0}}
+
+
+\newcommand{\trigsysDFct}[1]{
+\coordSysBBWFlex{0.2cm}{-6}{10}{-2.5}{2.5}{\varphi}{#1}{
+ \foreach \x [evaluate=\x as \degree using int(\x*90)] in {-3,-2,-1,1,2,3,4,5}{ 
+   \draw (\x *18mm, 1pt) -- (\x * 18mm, -1pt) node[anchor = north] {$\degree^\circ$};
+  }   
+  \foreach \y in {-1,1}
+   \draw (1pt, \y *2cm) -- (-1pt, \y *2cm) node[anchor = east] {$\y$};
+  }
+} %% end command: trig sys D cos()
+
+
+\newcommand{\trigsysDcos}{\trigsysDFct{2*cos(\x*50)}}
+\newcommand{\trigsysDsin}{\trigsysDFct{2*sin(\x*50)}}
+\newcommand{\trigsysD}{\trigsysDFct{0}}
