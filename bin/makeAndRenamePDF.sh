@@ -24,7 +24,7 @@ LATEX_TOOL=pdflatex
 echo "First processing ${LATEX_TOOL} .. ${ARTICLE_FILE_NAME}"
 
 #latex ${article}
-${LATEX_TOOL} ${ARTICLE_FILE_NAME}
+${LATEX_TOOL}  ${ARTICLE_FILE_NAME}
 
 makeindex ${ARTICLE_FILE_NAME}.idx
 
@@ -51,10 +51,10 @@ if [ -x ${postprocess} ]
 fi
 
 makeindex ${ARTICLE_FILE_NAME}.idx
-${LATEX_TOOL} ${ARTICLE_FILE_NAME}
+${LATEX_TOOL} --shell-escape ${ARTICLE_FILE_NAME}
 makeindex ${ARTICLE_FILE_NAME}.idx
 
-${LATEX_TOOL} ${ARTICLE_FILE_NAME}
+${LATEX_TOOL} --shell-escape ${ARTICLE_FILE_NAME}
 #lualatex ${ARTICLE_FILE_NAME}
 
 mv ${ARTICLE_FILE_NAME}.pdf ${ARTICLE_FILE_NAME}_${ZIELGRUPPE}.pdf
