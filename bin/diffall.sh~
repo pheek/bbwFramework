@@ -1,14 +1,14 @@
-echo "pull /cnt/ ..."
+echo "diff /cnt/ ..."
 cd cnt
-git pull
-echo "... done (pulling /cnt/)"
+git diff
+echo "... done (diff /cnt/)"
 
-echo "pull /pruefungen/ ..."
+echo "diff /pruefungen/ ..."
 cd ../pruefungen
-git pull
-echo "... done (pulling /pruefungen/)"
+git diff
+echo "... done (diff /pruefungen/)"
 
-echo "pull /framework/ ..."
+echo "diff /framework/ ..."
 cd ../framework
-git pull
-echo "... done (pulling /framework/)"
+git diff
+echo "... done (diff /framework/)"
