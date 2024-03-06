@@ -14,5 +14,3 @@
 \newif\ifisTALS
 \newif\ifisGESO
 \newif\ifisTRAINER
-
-\input{zielgruppe}

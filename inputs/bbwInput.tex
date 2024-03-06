@@ -3,10 +3,11 @@
 %% Welche Zielgruppe soll ausgedruckt werden?
 %% Typischerweise entweder TALS oder GESO (nicht beide). TRAINER ist optional für
 %% die Trainer Version.
-\input{inputs/bmsNewIfs}
-\input{zielgruppe}
 
-
+\ifdefined\isTRANSITIONAL%
+\else%
+\input{inputs/bmsNewIfs}%
+\fi%
 
 \input{inputs/bbwUsePackages}
 \input{inputs/bbwLayout}
