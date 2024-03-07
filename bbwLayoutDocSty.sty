@@ -41,7 +41,7 @@
   \newgeometry{top=12mm, left=17mm}
 
   \AddToShipoutPicture*{\BackgroundPicHellblauesRechteck}
-  \AddToShipoutPicture*{\BackgroundPicBubbles}
+%%  \AddToShipoutPicture*{\BackgroundPicBubbles}
 
   
 
@@ -57,14 +57,16 @@
 %% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
   %%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
 \vspace{-60mm}
-  \begin{tabular}{lll}
+
+\begin{tabular}{lllr}
 		\hspace{-5mm}\raisebox{-10mm}{\makebox{\includegraphics[width=16mm]{logos/loewe.pdf}}}
     &\vspace{-13mm}\raisebox{-1mm}{\makebox{\includegraphics[width=4.5mm]{logos/wappenSchwarz.png}}}&
     \makecell[l]{%%
       {\cdciFont{\small{BMSW Berufsmaturitätsschule}}}\\
 {\cdciFont{\footnotesize{Winterthur | Mathematik}}}\\
     }%% end makecell
-    \\
+    & \hspace{58mm}  \raisebox{-5mm}{\makebox{\includegraphics[width=16mm]{logos/2024/logo.pdf}}}
+\\   
     \end{tabular} 
 
   \vspace{22mm}
@@ -106,7 +108,11 @@
 
       \hspace{60mm} sich um die Version mit
 
-      \hspace{60mm} Kommentaren für die Lehrkraft.}}\fi%%
+      \hspace{60mm} Kommentaren für die Lehrkraft.
+
+      \hspace{27mm}{\cdciFont Ausrichtung: \ausrichtungAufTitelseite{}}
+
+  }}\fi%%
 
 %%	\vfill
 
