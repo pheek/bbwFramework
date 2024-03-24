@@ -9,11 +9,13 @@
 %%%%%%%%%%%%%%%%%%%%%%% P A C K A G E S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[paper=a5paper,landscape, margin=5mm]{geometry}%
 
-\input{bbwUsePackages}%
+\input{inputs/bbwUsePackages}%
 
-\input{bbwMakros}%
-\input{bbwLayout}%
-\input{matheMakros}%
+\input{inputs/bmsInputs}
+
+\input{inputs/bbwMakros}%
+\input{inputs/bbwLayout}%
+\input{inputs/matheMakros}%
 
 %%%%%%%%%%%%%%% L A Y O U T  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headheight30pt%

@@ -10,7 +10,7 @@
 %%\usepackage[paper=a5paper,landscape,margin=5mm]{geometry}%
 %%\usepackage[landscape,margin=5mm]{geometry}%
 
-\input{inputs/bbwInput}
+\input{inputs/bmsInput}
 
 \usepackage{bbwLayoutSlideSty}
 

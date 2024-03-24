@@ -1,0 +1,24 @@
+%% Philipp G Freimann Juli 2019 für die BMS
+%% Phi BMS-Vorlage für Arbeitsblätter (LaTeX)
+%% 2019 - 08 - 18
+
+%% %% %% %%
+\documentclass[twoside,12pt,a4paper]{article}%%
+\usepackage[paper=a4paper,margin=17mm]{geometry}%%
+
+\input{inputs/bmsInput}%%
+
+\usepackage{bmsLayoutPageSty}
+
+
+%%%%%%%%%%%%%%%  H E A D E R   &   F O O T E R %%%%%%%%%%%%%%%%%%%%
+%% Headers
+%%\fancyhf[HL]{\makebox{\includegraphics[width=30mm]{logos/bbw.pdf}}}%%
+\fancyhf[HR]{\topRightHeader} 
+\fancyhf[HC]{\metaHeaderLine{}}%%
+\fancyhf[FR]{\tiny{\shortAuthor{} (\today{})}}%%
+
+\newcommand{\arbeitsblattHeader}{%%
+  \begin{center}%%
+    {\Large \fontfamily{qhv}\selectfont \arbeitsblattTitel{}}%%
+\end{center}}%%
