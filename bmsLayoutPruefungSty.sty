@@ -115,10 +115,13 @@
   s. separates Lösungsblatt \textbf{\hspace*{\fill}Pkt.: ......}}}\\\hline{}%%
 }{\\\hline\end{tabular}\vspace{4mm}\endgroup}
 
+
 \newtotcounter{maxpunkte}
 \newcommand{\pruefungsIntro}{\setcounter{maxpunkte}{0}%%
   \,%% force some vspace after header line
-
+\pagestyle{fancy}
+\thispagestyle{firstPageStylePruefung}
+  
 \begin{tabular}{|l@{: }ll@{: }p{34mm}|}%%
 \hline%%
   Thema                             & \pruefungsThema{}            & Prüfungsdatum           & \pruefungsDatum{}                      \\%%
@@ -137,7 +140,8 @@
 \setcounter{maxpunkte}{0}%%
 \TRAINER{
   \begin{center}\Huge{\color{red}Lösungen}\end{center}
-  \newpage
+  \newpage%
+%  \thispagestyle{fancy}
 }%% END TRAINER
 }%% END environment "frage"
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5

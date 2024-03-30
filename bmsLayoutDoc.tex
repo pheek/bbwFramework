@@ -13,25 +13,35 @@
 \usepackage{bmsLayoutDocSty}
 
 %% GESO
-\newcommand{\versionGESOMajorDate}{9. Dez. 2023}
-\newcommand{\versionGESOMajorVSR}{1.13.0 (\LaTeX{})}
+\newcommand{\versionGESOMajorDate}{30. März 2024}
+\newcommand{\versionGESOMajorVSR}{1.14.0 (\LaTeX{})}
 
 %% TALS
-\newcommand{\versionTALSMajorDate}{9. Dez. 2023}
-\newcommand{\versionTALSMajorVSR}{1.13.0 (\LaTeX{})}
+\newcommand{\versionTALSMajorDate}{30. März. 2024}
+\newcommand{\versionTALSMajorVSR}{1.14.0 (\LaTeX{})}
+
+
+%%%%%%%%%%%%%%% HEADER & FOOTER on first page %%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 %%%%%%%%%%%%%%%  H E A D E R   &   F O O T E R %%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\topRightHeaderDoc}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Skript}}}}}\\{}}\end{tabular}}
+
+
 %% Oben (Header) linke Seite
 %%\fancyhf[HLE]{\makebox{\includegraphics[width=37mm]{logos/bbwBreit.pdf}}} 
-\fancyhf[HR]{\topRightHeader} 
-\fancyhf[HCE]{\parttitle}
+
+\fancyhf[HR]{\topRightHeaderDoc} 
+%\fancyhf[HCE]{\parttitle}
 %% Oben (Header) rechte Seite
-\fancyhf[HLO]{\leftmark}
+\fancyhf[HL]{\leftmark}
+%\fancyhf[FL]{\parttitle}
 %% Unten (Footer)  FRE = right even, FLE= left even, FRO = right odd,
 %% FCO = center odd
-\fancyhf[FRE]{\doctitel{}:\ \fachthema}
-\fancyhf[FLE,FRO]{\thepage{}/\pageref{LastPage}}
+\fancyhf[FL]{\doctitel{}:\ \parttitle\, \fachthema}
+\fancyhf[FR]{\thepage{}/\pageref{LastPage}}
 %%\fancyhf[FCO]{BBW: Abteilung 6 BMS}
-\fancyhf[FCO]{}
+%\fancyhf[FCO]{}
