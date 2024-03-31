@@ -1,0 +1,28 @@
+
+%% PBM Prüfung: Kanton: Überschreibe BMS-Winterthur
+\newcommand{\topRightHeader}{%%
+  \begin{tabular}{cl}
+
+    \makebox{\raisebox{-3.5mm}{\includegraphics[width=5mm]{logos/ZueriWappenCyan.pdf}}
+      \hspace{-2mm}}
+    &
+    \makecell[l]{%%
+      \vspace{-1.5mm}{\scriptsize{\cdciFont{Bildungsdirektion}}}\\
+      \vspace{-3mm}\scriptsize{\thepage/24}}%%
+  \end{tabular}%%
+  \vspace{1mm}
+}%% end kommand \topRightHeaderPruefung
+
+
+\fancyhf[HR]{\topRightHeader} 
+
+\fancyhf[FL]{\tiny{Diese Prüfungsaufgaben dürfen erst nach Freigabe durch die Kommission Berufsmaturität (KBM) im Unterricht verwendet werden.\\
+Eine kommerzielle Verwendung bedarf der Bewilligung der KBM des Kantons Zürich.}}
+\fancyhf[FR]{\tiny{\pruefungsIDAufgabe{}\\\ausrichtung{}}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%\setlength{\topmargin}{-5mm}
+%%\setlength{\leftmargin}{5mm}
+%%\setlength{\headheight}{mm}

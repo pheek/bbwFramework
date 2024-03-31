@@ -8,26 +8,10 @@
 
 \input{inputs/bmsInput}
 
-%% PBM Prüfung: Kanton: Überschreibe BMS-Winterthur
-\renewcommand{\topRightHeaderPruefung}{%%
-  \begin{tabular}{cl}
 
-    \makebox{\raisebox{-3.5mm}{\includegraphics[width=5mm]{logos/ZueriWappenCyan.pdf}}
-      \hspace{-2mm}}
-    &
-    \makecell[l]{%%
-      \vspace{-1.5mm}{\scriptsize{\cdciFont{Bildungsdirektion}}}\\
-      \vspace{-3mm}\scriptsize{\thepage/24}}%%
-  \end{tabular}%%
-  \vspace{1mm}
-}%% end kommand \topRightHeaderPruefung
+\newcommand{\ausrichtung}{AUSRICHTUNG überschreiben}
+\newcommand{\pruefungsIDAufgabe}{prüfungsIDAufgabe überschreiben}
 
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-%%\setlength{\topmargin}{-5mm}
-%%\setlength{\leftmargin}{5mm}
-%%\setlength{\headheight}{mm}
 
 \usepackage{bmsLayoutPruefungBMPSty}
 
@@ -40,21 +24,4 @@
 \vspace{2mm}%%
 }%% end newcommaand frageTitelZeile
 
-\fancyhf[HR]{\topRightHeaderPruefung} 
-
-%\fancyhf[HL]{\makebox{\includegraphics[width=36mm]{logos/bbwBreit.pdf}}}
-%\noTRAINER{\fancyhf[HC]{\pruefungsNummer{}. Prüfung: \pruefungsThema{} - \klasse}}
-%\TRAINER{\fancyhf[HC]{\colorbox{red}{\pruefungsNummer{}. Prüfung: \pruefungsThema{} - \klasse}}}
-%\fancyhf[FR]{\tiny{fp @ bbw (Druck: \today{})}}
-
-
-%% dies wäre der korrekte font (sofern installiert), doch SEHR fett???
-%\usepackage{fontspec}
-%\setmainfont[Mapping=tex-text-ms]{4213-font}
-
-\newcommand{\ausrichtung}{AUSRICHTUNG überschreiben}
-\newcommand{\pruefungsIDAufgabe}{prüfungsIDAufgabe überschreiben}
-
-\fancyhf[FL]{\tiny{Diese Prüfungsaufgaben dürfen erst nach Freigabe durch die Kommission Berufsmaturität (KBM) im Unterricht verwendet werden.\\
-Eine kommerzielle Verwendung bedarf der Bewilligung der KBM des Kantons Zürich.}}
-\fancyhf[FR]{\tiny{\pruefungsIDAufgabe{}\\\ausrichtung{}}}
+\input{bmsLayoutPruefungBMPHeaderFooter}
