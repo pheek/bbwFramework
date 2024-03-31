@@ -9,48 +9,4 @@
 
 \usepackage{bmsLayoutPruefungSty}
 
-%%%%%%%%%%%%%%%  H E A D E R   &   F O O T E R FIRST PAGE   %%%%%%%%%%%%%%%%%%%%
-\newcommand{\topRightHeaderPruefungFP}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Prüfung}}}}}\\{}}\end{tabular}}
-
-\newcommand{\topLeftHeaderPruefungFP}{%
-\begin{tabular}{c}%
-  \makebox{\raisebox{-1.1mm}{\includegraphics[width=77mm]{logos/2024/loewe_text_bordeaux.pdf}}}
-\end{tabular}%
-}% end command topLeftHeaderAB
-
-\fancypagestyle{firstPageStylePruefung}
-{
-  \fancyhf[HR]{\topRightHeaderPruefungFP}
-  \fancyhf[HL]{\topLeftHeaderPruefungFP}
-  \fancyhf[HC]{}
-  \fancyfoot[C]{}
-  \renewcommand{\headrulewidth}{1pt}
-  \fancyhf[FR]{\tiny{philipp.freimann@bbw.ch (\today{})}}%%
-}
-%%%%%%%%%%%%%%%%%% HEADER & FOOTER following Pages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newcommand{\topLeftHeaderPruefung}{%
-%\begin{tabular}{c}%
-%\makebox{%
-%\raisebox{-1.1mm}{\includegraphics[width=77mm]{logos/2024/loewe_text_bordeaux.pdf}}%%
-%}%
-%\end{tabular}%%
-%}%
-
-\newcommand{\topRightHeaderPruefung}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Prüfung}}}}}\\{}}\end{tabular}}
-
-
-\fancyhf[HL]{}
-\fancyhf[HR]{\topRightHeaderPruefung}
-\fancyhf[HC]{}%\metaHeaderLine{}}%%
-%\fancyhf[HC]{\metaHeaderLine{}}%%
-%\fancyhf[FR]{\tiny{\shortAuthor{} (\today{})}}%%
-\fancyhf[FR]{}
-\fancyfoot[C]{}
-\renewcommand{\headrulewidth}{1pt}
-
-%\fancyhf[HL]{\makebox{\includegraphics[width=36mm]{logos/bbwBreit.pdf}}}
-%\noTRAINER{\fancyhf[HC]{\pruefungsNummer{}. Prüfung: \pruefungsThema{} - \klasse}}
-%\TRAINER{\fancyhf[HC]{\colorbox{red}{\pruefungsNummer{}. Prüfung: \pruefungsThema{} - \klasse}}}
-%\fancyhf[FR]{\tiny{fp @ bbw (Druck: \today{})}}
-
+\input{bmsLayoutPruefungHeaderFooter}

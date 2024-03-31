@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%  H E A D E R   &   F O O T E R FIRST PAGE   %%%%%%%%%%%%%%%%%%%%
+\newcommand{\topRightHeaderFP}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Prüfung}}}}}\\{}}\end{tabular}}
+
+\newcommand{\topLeftHeaderFP}{%
+\begin{tabular}{c}%
+  \makebox{\raisebox{-1.1mm}{\includegraphics[width=77mm]{logos/2024/loewe_text_schwarz.pdf}}}
+\end{tabular}%
+}% end command topLeftHeaderAB
+
+\fancypagestyle{firstPageStylePruefung}
+{
+  \fancyhf[HR]{\topRightHeaderFP}
+  \fancyhf[HL]{\topLeftHeaderFP}
+  \fancyhf[HC]{}
+  \fancyfoot[C]{}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\footrulewidth}{1pt}
+  \fancyhf[FR]{\tiny{philipp.freimann@bbw.ch (\today{})}}%%
+}
+%%%%%%%%%%%%%%%%%% HEADER & FOOTER following Pages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\topRightHeader}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Prüfung}}}}}\\{}}\end{tabular}}
+
+\fancyhf[HL]{}
+\fancyhf[HR]{\topRightHeader}
+\fancyhf[HC]{}
+
+\fancyhf[FR]{}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
