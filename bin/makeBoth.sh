@@ -17,7 +17,6 @@ echo "Caller Dir (make_dir): ${MAKE_DIR}"
 export TEX_LAYOUT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )
 echo "Layout Dir: ${TEX_LAYOUT_DIR}"
 
-
 TEX_LAYOUT_DIR=`realpath ${TEX_LAYOUT_DIR}/..`
 echo "Layout Dir: ${TEX_LAYOUT_DIR}"
 
@@ -32,7 +31,6 @@ echo "BBW_THEMA_DIR = ${BBW_THEMA_DIR}"
 
 export BBW_PRUEFUNGS_AUFGABEN_DIR=`realpath ${TEX_MAIN_PARENT}/../pruefungen/aufgaben`
 echo "BBW_PRUEFUNGS_AUFGABEN_DIR = ${BBW_PRUEFUNGS_AUFGABEN_DIR}"
-
 
 ##export BBW_REPETITIONS_AUFGABEN_DIR=${TEX_MAIN_PARENT}/includes/repetition
 
