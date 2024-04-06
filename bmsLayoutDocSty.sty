@@ -36,11 +36,22 @@
 %%\vfill
 }}}
 
+\newcommand\BackgroundPicHellbraunesRechteck{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=180mm,height=122mm,keepaspectratio]{logos/hellbraunesRechteck.pdf}%
+\vspace{24mm}
+%%\vfill
+}}}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \newcommand{\ptitlepage}{
   \newgeometry{top=12mm, left=17mm}
 
-  \AddToShipoutPicture*{\BackgroundPicHellblauesRechteck}
+  \AddToShipoutPicture*{\BackgroundPicHellbraunesRechteck}
 %%  \AddToShipoutPicture*{\BackgroundPicBubbles}
 
   
@@ -103,7 +114,7 @@
 
   %%	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
   
-	\ifisTRAINER{{\color{trainerFarbe}
+	\ifisTRAINER{{\color{red}
      
       \hspace{60mm} Hierbei handelt es
 
@@ -111,7 +122,7 @@
 
       \hspace{60mm} Kommentaren für die Lehrkraft.
 
-      \hspace{27mm}{\cdciFont Ausrichtung: \ausrichtungAufTitelseite{}}
+      \hspace{38mm}{\cdciFont Ausrichtung: \ausrichtungAufTitelseite{}}
 
   }}\fi%%
 
