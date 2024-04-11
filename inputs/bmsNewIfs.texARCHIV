@@ -22,4 +22,5 @@
 %% Insb. MatheNinja Links. Diese sind jedoch in einem anderen Kurs!
 \newif\ifisBLENDED
 
-\input{zielgruppe}
+%% this must not happen
+\input{zielgruppeBLAHBALH}
