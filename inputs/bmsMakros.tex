@@ -6,8 +6,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%% g e n e r e l l e   M a k r o s %%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END BBW Makros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %% change, if huge (V=Version), major (S=Subversion) or minor
 %% (R=Revision) changes have benn made
@@ -72,16 +70,13 @@
 \newcommand{\noTRAINER}[1]{{\ifisTRAINER{}\else{#1}\fi}{}}%%
 
 
-
 %%\makeatletter
 %% Je nach Umgebung "environment" wird das mmPapier breiter oder
 %% schmaler
 %% bei itemize sollen 16.4 und bei definiton-Boxen 16.8 mm genommen
 %% werden.
 
-
 \usepackage{inputs/mmPapierbreiteSty}
-
 
 %% Trainer "no" Dotfill
 %% If no Trainer: Dotfill
@@ -267,10 +262,12 @@ z.\,B.
 
 \newcommand{\weblink}[2]{\href{#2}{#1}}
 
-\newcommand{\olatBBWLogo}{\includegraphics[width=15mm]{logos/2024/logo.pdf}}%%
-\newcommand{\externerLinkEPS}{\includegraphics[width=15mm]{logos/extLink.pdf}}%%
-\newcommand{\youtubeLogo}{\includegraphics[width=15mm]{logos/youtube.png}}%%
-
+\newcommand{\olatBBWLogo}{\includegraphics[width=13mm]{logos/2024/logo.pdf}}%%
+\newcommand{\olatBMSSeite}{\includegraphics[width=13mm]{logos/seite.pdf}}%%
+\newcommand{\olatBMSTest}{\includegraphics[width=13mm]{logos/test.pdf}}%%
+\newcommand{\externerLinkEPS}{\includegraphics[width=13mm]{logos/extLink.pdf}}%%
+\newcommand{\youtubeLogo}{\includegraphics[width=13mm]{logos/youtube.png}}%%
+\newcommand{\matheNinjaLogo}{\includegraphics[width=13mm]{img/matheninja/matheninja.jpg}}%%
 
 %%
 %% #1: Text
@@ -281,7 +278,7 @@ z.\,B.
 \begin{tabular}{|lp{111mm}|}\hline%%
 \multicolumn{2}{|p{172mm}|}{\cellcolor{aufgabenFarbe}#3}\\
 \weblink{\raisebox{-5mm}{\externerLinkEPS{}}}{#2} {#4}  & \weblink{#1}{#2}\\\hline
-\multicolumn{2}{|p{172mm}|}{\weblink{#2}{#2}}\\\hline
+\multicolumn{2}{|p{172mm}|}{\weblink{\tiny{#2}}{#2}}\\\hline
 \end{tabular}%%
 \vspace{1mm}
 }%% END Command externalLink
@@ -292,6 +289,20 @@ z.\,B.
 \externalLink{#2}{#1}{Youtube}{\raisebox{-5mm}{\youtubeLogo{}}}
 }%%
 
+
+%%
+%% use:
+%% \matheNinjaLink{Beschreibung}{URL}
+\newcommand{\matheNinjaLink}[2]{%%
+\externalLink{#1}{#2}{MatheNinja}{\raisebox{-5mm}{\matheNinjaLogo}}
+}%%
+
+
+%\newcommand{\matheNinjaLink}[2]{\olatLink{\raisebox{-6mm}{\includegraphics[width=17mm]{img/matheninja/matheninja.jpg}}}{Mathe Ninja!}{#2}{#1}}%%
+
+
+
+
 %%
 %% #1: Typ-Logo (eg. LOGO auf MatheNinja)
 %% #2: Typ-Name (eg «Mathe Ninja»
@@ -299,8 +310,11 @@ z.\,B.
 %% #4: Aufgaben Name
 \newcommand{\olatLink}[4]{%%
 \begin{tabular}{|lp{111mm}|}\hline%%
-\multicolumn{2}{|p{172mm}|}{\cellcolor{aufgabenFarbe}#4}\\
-\weblink{\raisebox{-5mm}{\externerLinkEPS{}}}{#3} \weblink{\raisebox{-5mm}{\olatBBWLogo}}{#3} \weblink{#1}{#3}& \weblink{#2}{#3}\\\hline
+\multicolumn{2}{|p{172mm}|}{\cellcolor{aufgabenFarbe}#2}\\%
+%%\weblink{\raisebox{-5mm}{\externerLinkEPS{}}}{#3}
+\weblink{\raisebox{-3mm}{\olatBBWLogo}}{#3}%
+\weblink{#1}{#3}& \weblink{#4
+}{#3}\\\hline
 \end{tabular}%%
 \vspace{1mm}
 }%% END Command olatLink
@@ -315,29 +329,23 @@ z.\,B.
 
 %% Use:
 %% \olatLinkArbeitsblatt{Kapitel/Arbeitsblattname «[ID]»}{«URL»}{Aufgabennummern}
-\newcommand{\olatLinkArbeitsblatt}[3]{\olatLink{\raisebox{-6mm}{\includegraphics[width=12mm]{logos/seite.pdf}}}{Arbeitsblatt: #1}{#2}{#3}}%%
+\newcommand{\olatLinkArbeitsblatt}[3]{\olatLink{\raisebox{-6mm}{\olatBMSSeite}}{Arbeitsblatt: #1}{#2}{#3}}%%
 
 %% Use:
 %% \olatLinkVideo{Titel}{«URL»}{Was}
-\newcommand{\olatLinkVideo}[3]{\olatLink{\raisebox{-6mm}{\includegraphics[width=12mm]{logos/seite.pdf}}}{Video: #1}{#2}{#3}}%%
+\newcommand{\olatLinkVideo}[3]{\olatLink{\raisebox{-6mm}{\olatBMSSeite}}{Video: #1}{#2}{#3}}%%
 
 
 %% #1: Text
 %% #2: URL
-\newcommand{\olatLinkPruefung}[2]{\olatLink{\raisebox{-6mm}{\includegraphics[width=15mm]{logos/test.pdf}}}{Online Test}{#2}{#1}}%%
-
-
-%%
-%% use:
-%% \matheNinjaLink{Beschreibung}{URL}
-\newcommand{\matheNinjaLink}[2]{\olatLink{\raisebox{-6mm}{\includegraphics[width=17mm]{img/matheninja/matheninja.jpg}}}{Mathe Ninja!}{#2}{#1}}%%
+\newcommand{\olatLinkPruefung}[2]{\olatLink{\raisebox{-6mm}{\olatBMSTest}}{Online Test}{#2}{#1}}%%
 
 
 %% Use
 %% \olatLinkGESOKompendium{Kapitel}{Seite/Seiteff}{Aufgabe(n)}
 \newcommand{\olatLinkGESOKompendium}[3]{%%
 \GESO{%%
-\olatLink{{\Huge K}}{Kompendium}{https://olat.bbw.ch/auth/RepositoryEntry/572162163/CourseNode/106029172671728}{Kapitel #1; Seite #2; Aufg. #3}%%
+\olatLink{{\color{bbwFarbe}\Huge K}}{Kompendium}{https://olat.bbw.ch/auth/RepositoryEntry/572162163/CourseNode/106029172671728}{Kapitel #1; Seite #2; Aufg. #3}%%
 }%% END GESO
 }%%
 
@@ -345,13 +353,13 @@ z.\,B.
 %% Use \olatLinkTALSStrukturaufgabenSPF{Kapitel}{Seite/Seiteff}{Aufgabe(n)}
 \newcommand{\olatLinkTALSStrukturaufgabenSPF}[3]{%%
 \TALS{%%
-\olatLink{{\Huge S}}{Strukturaufgaben [SPF]}{https://olat.bbw.ch/auth/RepositoryEntry/21200903/CourseNode/102901160343445}{Kapitel #1; Seite #2; Aufgaben #3}%%
+\olatLink{{\color{bbwFarbe}\Huge S}}{Strukturaufgaben [SPF]}{https://olat.bbw.ch/auth/RepositoryEntry/21200903/CourseNode/102901160343445}{Kapitel #1; Seite #2; Aufgaben #3}%%
 }%% END TALS
 }%%
 
 \newcommand{\olatLinkTALSStrukturaufgabenGLF}[3]{%%
 \TALS{%%
-\olatLink{{\Huge S}}{Strukturaufgaben [GLF]}{https://olat.bbw.ch/auth/RepositoryEntry/21200903/CourseNode/102901160330506}{Kapitel #1; Seite #2; Aufgaben #3}%%
+\olatLink{{\color{bbwFarbe}\Huge S}}{Strukturaufgaben [GLF]}{https://olat.bbw.ch/auth/RepositoryEntry/21200903/CourseNode/102901160330506}{Kapitel #1; Seite #2; Aufgaben #3}%%
 }%% END TALS
 }%%
 
