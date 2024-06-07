@@ -122,14 +122,20 @@
 \pagestyle{fancy}
 \thispagestyle{firstPageStylePruefung}
   
-\begin{tabular}{|l@{: }ll@{: }p{34mm}|}%%
+\begin{tabular}{|l@{:\,}p{57mm}l@{:\,}p{45mm}|}%%
 \hline%%
-  Thema                             & \pruefungsThema{}            & Prüfungsdatum           & \pruefungsDatum{}                      \\%%
-  Prüfungsnummer                    & \pruefungsNummer{}           & Prüfungsteil            & \pruefungsTeil{}                       \\%%
-  Klasse                            & \klasse{}                    & Vorgabezeit             & \pruefungsVorgabeZeit{}               \\%%
-  \textbf{Vorname}                  & \noTRAINER{............................}%%
-                            \TRAINER{{\color{red}Lehrer/Lösungen}} & \textbf{Familienname}   & ............................\\%%
-  Punkte (Max.\,\total{maxpunkte})  & ............................ & Note                    & ............................              \\%%
+{\color{gray}Thema}            & {\,\,\textbf\pruefungsThema{}}& {\color{gray}Prüfungsdatum}&{\,\,\textbf\pruefungsDatum{}}\\\hline%%
+
+{\color{gray}Klasse}           & {\,\,\textbf\klasse{}}&{\color{gray}Vorgabezeit}& {\,\,\color{gray}\pruefungsVorgabeZeit{}\,}\\\hline%%
+
+{\color{gray}Prüfungsnummer}   & {\,\,\color{gray}\pruefungsNummer{}}  & {\color{gray}Prüfungsteil}&{\,\,\color{gray}\pruefungsTeil{}}\\\hline%%
+
+\textbf{Vorname\vphantom{$\Spvek{8;8}$}}               & \noTRAINER{............................} \TRAINER{{\color{red}Lehrer/Lösungen}} &
+\textbf{Familienname}   & ............................\\%%
+
+
+Punkte (Max.\,\total{maxpunkte})  & ............................ & Note          & ............................\\%%
+
 \hline%%
 \end{tabular}%%
 \vspace{1mm}\\%%
