@@ -125,6 +125,28 @@
 \newcommand{\mmPapier}[1]{\mmPapierZwei{#1}{\defaultTextBreite}}
 
 
+
+
+
+\newcommand{\mmPapierZweiBMP}[2]{\begin{tikzpicture}
+%%  \draw[step=4mm,bbwMMFarbe,ultra thin]
+%%  \draw[step=4mm,bbwMMFarbe,thick]
+  \draw[step=5mm,lightgray,line width=0.02mm]
+  (0, 0) grid ({#2}, {#1});
+\end{tikzpicture}}%%
+
+
+\newcommand{\mmPapierBMP}[1]{\mmPapierZweiBMP{#1}{\defaultTextBreite}}
+
+
+
+
+
+
+
+
+
+
 %% Notizen Berechungen auf Prüfungsblättern
 \newcommand{\platzFuerBerechnungen}[1]{\noTRAINER{
 
