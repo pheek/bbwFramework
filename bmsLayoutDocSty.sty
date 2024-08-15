@@ -8,43 +8,45 @@
 
 %% für background züri wappen siehe auch hier:
 %https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex :
-\newcommand\BackgroundPicWappen{%
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{logos/DreieckBlau.pdf}%
-\vfill
-}}}
+%\newcommand\BackgroundPicWappen{%
+%\put(0,0){%
+%\parbox[b][\paperheight]{\paperwidth}{%
+%\vfill
+%\centering
+%\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{logos/DreieckBlau.pdf}%
+%\vfill
+%}}}
 
-\newcommand\BackgroundPicBubbles{%
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-%%\centering
-\hspace{32mm}\includegraphics[width=113mm,height=111mm,keepaspectratio]{logos/Bubbles.png}%
-\vspace{116mm}
-}}}
+%\newcommand\BackgroundPicBubbles{%
+%\put(0,0){%
+%\parbox[b][\paperheight]{\paperwidth}{%
+%\vfill
+%  %%\centering
+%\hspace{32mm}\includegraphics[width=113mm,height=111mm,keepaspectratio]{logos/Bubbles.png}%
+%\vspace{116mm}
+%}}}
 
 \newcommand\BackgroundPicHellblauesRechteck{%
-\put(0,0){%
+\put(0,140){%
 \parbox[b][\paperheight]{\paperwidth}{%
-\vfill
+%%\vfill
+\vspace{80mm}  
 \centering
-\includegraphics[width=157mm,height=124mm,keepaspectratio]{logos/hellblauesRechteck.pdf}%
-\vspace{24mm}
+\includegraphics[width=157mm,height=130mm,keepaspectratio]{logos/hellblauesRechteck.pdf}%
+%%\vspace{24mm}
 %%\vfill
 }}}
 
-\newcommand\BackgroundPicHellbraunesRechteck{%
-\put(0,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=180mm,height=122mm,keepaspectratio]{logos/hellbraunesRechteck.pdf}%
-\vspace{24mm}
+%\newcommand\BackgroundPicHellbraunesRechteck{%
+%\put(0,0){%
+%\parbox[b][\paperheight]{\paperwidth}{%
+%\vfill
+%  %%  \vspace{130mm}
+%\centering
+%\includegraphics[width=180mm,height=180mm]{logos/hellbraunesRechteck.pdf}%
+%\vspace{50mm}
 %%\vfill
-}}}
+%}}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
@@ -68,24 +70,29 @@
 
 %% Das Original EPS der BBW vom OLAT hat irgendwie nicht gefunzt
   %%		\makebox{\includegraphics[width=11cm]{logos/bbw.pdf}}
-\vspace{-60mm}
+\vspace{-80mm}
 
-\begin{tabular}{lllr}
-		\hspace{-5mm}\raisebox{-10mm}{\makebox{\includegraphics[width=16mm]{logos/loewe.pdf}}}
-    &\vspace{-13mm}\raisebox{-1mm}{\makebox{\includegraphics[width=4.5mm]{logos/wappenSchwarz.png}}}&
-    \makecell[l]{%%
-      {\cdciFont{\small{BMSW Berufsmaturitätsschule}}}\\
-{\cdciFont{\footnotesize{Winterthur | Mathematik}}}\\
-    }%% end makecell
-    & \hspace{58mm}  \raisebox{-5mm}{\makebox{\includegraphics[width=16mm]{logos/2024/logo.pdf}}}
-\\   
-    \end{tabular} 
+%\begin{tabular}{lllr}
+%		\hspace{-5mm}\raisebox{-10mm}{\makebox{\includegraphics[width=16mm]{logos/loewe.pdf}}}
+%    &\vspace{-13mm}\raisebox{-1mm}{\makebox{\includegraphics[width=4.5mm]{logos/wappenSchwarz.png}}}&
+%    \makecell[l]{%%
+%      {\cdciFont{\small{BMSW Berufsmaturitätsschule}}}\\
+%       {\cdciFont{\footnotesize{Winterthur | Mathematik}}}\\
+%    }%% end makecell
+%    & \hspace{58mm}  \raisebox{-5mm}{\makebox{\includegraphics[width=16mm]{logos/2024/logo.pdf}}}
+%\\   
+%    \end{tabular} 
 
-  \vspace{22mm}
+\begin{tabular}{lc}
+  \raisebox{-5mm}{\makebox{\includegraphics[width=40mm]{logos/2024/logo.pdf}}}
+\end{tabular}
 
-\hspace{27mm}{{\huge \color{bbwFarbe}{\cdciFont\doctitel}}}
 
-\hspace{27mm}{\cdciFont\untertitel}
+  \vspace{18mm}
+
+\hspace{27mm}{{\huge {\textbf{\cdciFont\doctitel}}}}
+
+\hspace{27mm}{\color{bbwFarbe}{\cdciFont\untertitel}}
 
 \hspace{27mm}\noTRAINER{\cdciFont\ausrichtungAufTitelseite{}} 
 
@@ -96,7 +103,7 @@
  %   \end{center}
 
   
-	\vspace*{105mm}
+	\vspace*{40mm}
 	\begin{center}
 		\ifisTRAINER{\hspace{6mm}\Huge
 			\colorbox{red}{\cdciFont{Trainer-Version}}\\
@@ -110,8 +117,8 @@
 	\end{center}
 
 	\noTRAINER{\vspace*{14mm}}
-  \TRAINER{\vspace*{8mm}}
-
+  \TRAINER{\vspace*{4mm}}
+%%\hrule
   %%	\begin{center}{\Large\texttt{www.bbw.ch}}\end{center}
   
 	\ifisTRAINER{{\color{red}
@@ -122,13 +129,22 @@
 
       \hspace{60mm} Kommentaren für die Lehrkraft.
 
-      \hspace{38mm}{\cdciFont Ausrichtung: \ausrichtungAufTitelseite{}}
+      \hspace{38mm}{{\cdciFont{ Ausrichtung: \ausrichtungAufTitelseite{}}}}
 
   }}\fi%%
 
-%%	\vfill
+  %%	\vfill
+  \vspace{65mm}
+%%\TRAINER{\vspace{62mm}}
+\noTRAINER{\vspace{29mm}}
+%%\hrule{}
 
-	\thispagestyle{empty}
+\begin{tabular}{p{6mm}lp{80mm}r|l}
+  &{\scriptsize \textbf{Berufsmaturitätsschule}} &\, & { \scriptsize Ph. Freimann} & {\scriptsize \today{}} \\
+  &{\scriptsize \textbf{Winterthur}}             &\, & {\scriptsize  Mathematik}   & {\scriptsize \docversion{} }
+\end{tabular}
+
+  \thispagestyle{empty}
 
   \restoregeometry{}
 	\newpage
