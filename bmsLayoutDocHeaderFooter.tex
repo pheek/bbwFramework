@@ -4,9 +4,18 @@
 
 
 %%%%%%%%%%% HEADER FOOTER following pages %%%%%%%%%%%%%%%%%%%%
-\newcommand{\topRightHeader}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Skript}}}}}\\{}}\end{tabular}}
+%\newcommand{\topRightHeader}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Skript}}}}}\\{}}\end{tabular}}
 
-\fancyhf[HR]{\topRightHeader} 
-\fancyhf[HL]{\leftmark}
-\fancyhf[FL]{\doctitel{}:\ \parttitle\, \fachthema}
-\fancyhf[FR]{\thepage{}/\pageref{LastPage}}
+%\fancyhf[HR]{\topRightHeader} 
+%\fancyhf[HL]{\leftmark}
+%\fancyhf[FL]{\doctitel{}:\ \parttitle\, \fachthema}
+%\fancyhf[FR]{\thepage{}/\pageref{LastPage}}
+
+
+\newcommand{\topLeftHeader}{\begin{tabular}{cl}\makebox{\raisebox{-1.1mm}{\includegraphics[width=8mm]{logos/2024/logo.pdf}}\hspace{-2mm}}&\makecell[l]{\vspace{-2.5mm}{\scriptsize{\cdciFont{{\color{bbwFarbe}Mathematik}}}}\\{\vspace{-3mm}\scriptsize{\cdciFont{{\color{bbwFarbe}\tiny{Skript}}}}}\\{}}\end{tabular}}
+
+\fancyhf[HR]{\thepage}
+%\fancyhf[HC]{\tiny{\leftmark}}
+\fancyhf[HL]{\topLeftHeader}
+\fancyhf[FL]{\scriptsize{\doctitel{}:\ \parttitle\, \fachthema : \leftmark}}
+%\fancyhf[FR]{\leftmark}

@@ -140,6 +140,8 @@
 %%\hrule{}
 \enlargethispage{15mm} %%20\baselineskip}
 
+\thispagestyle{empty}
+
 \vspace*{25mm}
 
 \renewcommand*{\arraystretch}{0.5}
@@ -147,12 +149,13 @@
   &{\scriptsize \textbf{Berufsmaturitätsschule}} &\, & { \scriptsize Ph. Freimann} & {\scriptsize \today{}} \\
   &{\scriptsize \textbf{Winterthur}}             &\, & {\scriptsize  Mathematik}   & {\scriptsize \docversion{} }
 \end{tabular}
-\renewcommand*{\arraystretch}{1}
-
-  \thispagestyle{empty}
-
-  \restoregeometry{}
-	\newpage
+\renewcommand*{\arraystretch}{1}%
+%
+%
+\restoregeometry{}%%
+%
+%
+\newpage
 	\impressum
 
 	\tableofcontents
