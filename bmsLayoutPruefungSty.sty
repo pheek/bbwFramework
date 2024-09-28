@@ -113,7 +113,7 @@
 \multicolumn{1}{p{171mm}}{\textbf{Aufgabe\ \arabic{frageCounter}\stepcounter{frageCounter}%%
 \,\,[\arabic{tmpCounter} Pkt.]:} \noTRAINER{\hspace*{\fill} $\Box$
   s. separates Lösungsblatt \textbf{\hspace*{\fill}Pkt.: ......}}}\\\hline{}%%
-}{\\\hline\end{tabular}\vspace{4mm}\endgroup}
+}{\\\hline\end{tabular}\vspace{4mm}\endgroup}%% end environment frage
 
 
 \newtotcounter{maxpunkte}
@@ -146,10 +146,11 @@ Punkte (Max.\,\total{maxpunkte})  & ............................ & Note         
 \setcounter{maxpunkte}{0}%%
 \TRAINER{
   \begin{center}\Huge{\color{red}Lösungen}\end{center}
-  \newpage%
+%  \newpage%
 %  \thispagestyle{fancy}
 }%% END TRAINER
-}%% END environment "frage"
+\newpage
+}%% END command "prüfungsIntro"
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 
