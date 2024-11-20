@@ -1,5 +1,4 @@
-
-%% %% %% %%
+%% %% %%
 
 %%  In den Dokumenten können die folgenden Attribute überschrieben werden:
 
@@ -118,7 +117,10 @@
 
 \newtotcounter{maxpunkte}
 \newcommand{\pruefungsIntro}{\setcounter{maxpunkte}{0}%%
-  \,%% force some vspace after header line
+%
+\setlength{\headheight}{15mm}%
+% 
+\,%% force some vspace after header line
 \pagestyle{fancy}
 \thispagestyle{firstPageStylePruefung}
 %
@@ -138,7 +140,7 @@ Punkte (Max.\,\total{maxpunkte})  & ............................ & Note         
 
 \hline%%
 \end{tabular}%%
-\vspace{1mm}\\%%
+\vspace{3mm}\\%%
 \textbf{Hilfsmittel}: \pruefungsHilfsmittel{}\\
 \kommunikationsausschluss{}\loesungswegsklausel{}\vielGlueck{}\\%%
 %%\textit{Lösungswege können zur Bewertung herangezogen werden.}\\%%
@@ -150,6 +152,7 @@ Punkte (Max.\,\total{maxpunkte})  & ............................ & Note         
 %  \thispagestyle{fancy}
 }%% END TRAINER
 \newpage
+\setlength{\headheight}{0px}%
 }%% END command "prüfungsIntro"
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
