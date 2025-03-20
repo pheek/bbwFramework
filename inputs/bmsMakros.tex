@@ -202,13 +202,17 @@ z.\,B.
 %
 
 %% Theorem-Styles
-\newcommand\theoremlayoutdefinition[4]{\newtcbtheorem[number within=section]{#1}{#2}%
-   {theorem style=plain,enhanced,colframe=#3!20!white,colback=#3!20!white,
+
+
+\newcommand\theoremlayoutdefinition[4]{\newtcbtheorem[number within=section]{#1}{#2}
+{theorem style=plain,enhanced,colframe=#3!20!white,colback=#3!20!white,
      coltitle=#3!60!black,fonttitle=\upshape\bfseries,
      %%fontupper=\itshape,
-    %%drop fuzzy shadow=blue!50!black!50!white,
-    terminator sign={:},
-    borderline north={0.5mm}{0pt}{#3}, borderline south={0.5mm}{0pt}{#3}
+     %%drop fuzzy shadow=blue!50!black!50!white,
+     terminator sign={:},
+     description delimiters={\,}{\,}
+     borderline north={0.5mm}{0pt}{#3},
+     borderline south={0.5mm}{0pt}{#3}
 }{#4}}
 
 
