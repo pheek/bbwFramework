@@ -160,8 +160,12 @@ Punkte (Max.\,\total{maxpunkte})  & ............................ & Note         
 %% Wahr/Falsch Boxen
 %% Aufruf \wahrbox{wahr}, falls das Resultat wahr ist
 %% Aufruf \wahrbox{falsch}, falls ``falsch'' angegeben werden muss.
+
 %\newcommand{\wahrbox}[1]{($\Box$ wahr; $\Box$ falsch)\TRAINER{#1}}%%
 % bereits bei ./intputs/prfg/AntwortBox.tex included
+
+%%\newcommand{\wahrbox}[1]{($\Box$ wahr; $\Box$ falsch)\TRAINER{#1}}%%
+
 
 %% Besser:
 %% Aufruf \bbwCheckBox{true}{«hier ist die frage»} falls wahr
@@ -171,9 +175,15 @@ Punkte (Max.\,\total{maxpunkte})  & ............................ & Note         
 % bereits bei ./inputs/prfg/AntwoertBox.tex included
 
 
+%%\newcommand{\bbwCheckBox}[2]{\ifstrequal{#1}{true}{\TRAINER{\makebox[0pt][l]{$\square$}{\raisebox{0.1\height}{$\times$}}}\noTRAINER{$\Box$}}{$\Box$} #2}
+
 %% Muss etwas schmaler sein, weil jede Frage einen Rahmen darum herum hat.
 \renewcommand{\mmPapier}[1]{\mmPapierZwei{#1}{17.6}}
 
 %% oder einfach \Box oder für trainer true: \BoxT
+
 %\newcommand{\BoxT}{\TRAINER{\color{green} x}\noTRAINER{\Box}}
 % bereits bei ./inputs/prfg/AntwoertBox.tex included
+
+%%\newcommand{\BoxT}{\TRAINER{\color{green} x}\noTRAINER{\Box}}
+
