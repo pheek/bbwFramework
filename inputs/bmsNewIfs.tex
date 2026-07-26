@@ -1,0 +1,25 @@
+%%
+%% Diese "if"s werden benötigt, um die
+%% Versionen zu steuern
+
+
+%% Solange beide versionen existieren
+%% a) Version mit den "Zielgruppe-Files", die mit Linux Bash generiert
+%%      werden
+%% b) Die Version OHNE Zielgruppe
+%% solange wird dieses Flag da stehen, damit im File "bmsInput.tex"
+%% die Zielgruppe NICHT importiert wird, bei den Dateien, die bereits
+%% im neuen Format sind.
+
+%\providecommand{\isTRANSITIONAL}{true}
+
+\newif\ifisTALS
+\newif\ifisGESO
+\newif\ifisTRAINER
+
+%% All in one Skript
+\newif\ifisALLINONE
+
+%% Blended Learning
+%% Insb. MatheNinja Links. Diese sind jedoch in einem anderen Kurs!
+\newif\ifisBLENDED
