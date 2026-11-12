@@ -369,12 +369,19 @@ z.\,B.
 %% #2: URL
 \newcommand{\olatLinkPruefung}[2]{\olatLink{\raisebox{-6mm}{\olatBMSTest}}{Online Test}{#2}{#1}}%%
 
-
+%% altes Kompendium
 %% Use
 %% \olatLinkGESOKompendium{Kapitel}{Seite/Seiteff}{Aufgabe(n)}
 \newcommand{\olatLinkGESOKompendium}[3]{%%
 \GESO{%%
-\olatLink{{\color{bbwFarbe}\Huge K}}{Kompendium}{https://olat.bms-w.ch/auth/RepositoryEntry/6029794/CourseNode/106029172671728}{Kapitel #1; Seite #2; Aufg. #3}%%
+\olatLink{{\color{bbwFarbe}\Huge K}}{(altes) Kompendium}{https://olat.bms-w.ch/auth/RepositoryEntry/6029794/CourseNode/106029172671728}{Kapitel #1; Seite #2; Aufg. #3}%%
+}%% END GESO
+}%%
+
+%% neues Kompendium ab 2030!
+\newcommand{\olatLinkGESOKompendi}[3]{%%
+\GESO{%%
+\olatLink{{\color{bbwFarbe}\Huge K}}{Kompendium}{https://olat.bms-w.ch/auth/RepositoryEntry/6029794/CourseNode/114649829140796}{Kapitel #1; Seite #2; Aufg. #3}%%
 }%% END GESO
 }%%
 
